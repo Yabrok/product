@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <title>Customers</title>
 </head>
@@ -62,9 +64,48 @@
                     <img src="./images/nmod.svg" alt="nightmod" width="32" height="32">
                 </button>
 
-                <button class="burger">
-                    <img src="./icons/burger.png" alt="menu" width="28" height="31">
-                </button>
+                <div class="burger">
+                    <button class="burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                        aria-controls="offcanvasRight">
+                        <img src="./icons/burger.png" alt="menu" width="28" height="31">
+                    </button>
+
+                    <div class="canvas-menu offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                        aria-labelledby="offcanvasRightLabel">
+                        <div class="burger__head offcanvas-header">
+                            <h5 class="burger__title offcanvas-title" id="offcanvasRightLabel">Menu</h5>
+                            <button class="nightmod js-nightmenu" style="display: block; margin: 0;">
+                                <img src="./images/nmod.svg" alt="nightmod" width="32" height="32">
+                            </button>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="burger__list">
+                                <li class="burger__item">
+                                    <a class="burger__link" href="./index.html">
+                                        Product
+                                    </a>
+                                </li>
+                                <li class="burger__item">
+                                    <a class="burger__link" href="./customers.html">
+                                        Customers
+                                    </a>
+                                </li>
+                                <li class="burger__item">
+                                    <a class="burger__link" href="./pricing.html">
+                                        Pricing
+                                    </a>
+                                </li>
+                                <li class="burger__item">
+                                    <a class="burger__link" href="./resources.html">
+                                        Resources
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -461,13 +502,13 @@
                 </div>
 
                 <div class="signbox">
-                    <form class="site-footer__form" action="https://echo.htmlacademy.ru/courses" method="post" autocomplete="off">
+                    <form class="site-footer__form" action="https://echo.htmlacademy.ru/courses" method="post"
+                        autocomplete="off">
                         <label class="signbox__label" for="signbox__label">
                             knowing you're always on the best energy deal.
                         </label>
-                        <input class="signbox__input" type="email" id="signbox__label" 
-                        placeholder="Enter your e-mail"
-                        name="user-email">
+                        <input class="signbox__input" type="email" id="signbox__label" placeholder="Enter your e-mail"
+                            name="user-email">
                         <button class="signobox__btn">
                             Sign up Now
                         </button>
@@ -477,6 +518,9 @@
         </div>
     </footer>
     <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
